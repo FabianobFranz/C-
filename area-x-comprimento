@@ -1,0 +1,23 @@
+using System;
+using System.Globalization;
+namespace PrimeiroProjeto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Digite a Largura do terreno: ");
+            double largura = (double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture));
+            Console.WriteLine("Digite o comprimento do terreno: ");
+            double comprimento = (double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture));
+            Console.WriteLine("Digite o valor do m² do terreno: ");
+            double valormetro = (double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture));
+           
+            double area = (largura) * (comprimento);
+            Console.WriteLine("Area: " + area.ToString("F2", CultureInfo.InvariantCulture));
+
+            double preco = (valormetro) * (area);
+            Console.WriteLine("Preço: " + preco.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
